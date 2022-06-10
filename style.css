@@ -1,11 +1,12 @@
 body {
+  height: 100vh;
   font: "Raleway", sans-serif;
   color: rgba(0, 0, 0, 0.5);
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.5em;
   top: 15%;
-  background: linear-gradient(to right, red, yellow); /* Standard syntax */
+  background: linear-gradient(to right, red, yellow);
 }
 
 h1 {
@@ -17,6 +18,23 @@ h1 {
   width: 100%;
 }
 
+#icons {
+  margin-top: 1.5rem;
+}
+
+.btn-icons {
+  background-color: white;
+  border: none;
+  color: rgba(0, 0, 0, 0.5);
+  padding: 0.5rem 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn-icons:hover {
+  background-color: #b7b7b7;
+}
+
 h3 {
   font: 900 1em "Raleway", sans-serif;
   color: rgba(0, 0, 0, 0.5);
@@ -26,6 +44,14 @@ h3 {
 }
 
 #random {
+  background-color: white;
   color: rgba(0, 0, 0, 0.5);
-  padding: 0.25rem 0.5rem;
+  padding: 0.5rem 0.5rem;
+  cursor: pointer;
+  border: none;
+  font-weight: 700;
+}
+
+#random:hover {
+  background-color: #b7b7b7;
 }
