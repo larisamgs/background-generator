@@ -37,13 +37,7 @@ function changeGradientDirection(event) {
   }
 
   body.style.background =
-    "linear-gradient(" +
-    iconDirection +
-    ", " +
-    color1.value +
-    ", " +
-    color2.value +
-    ")";
+    "linear-gradient(to right, " + color1.value + ", " + color2.value + ")";
 }
 
 body.style.background =
@@ -54,14 +48,8 @@ color1.addEventListener("input", setGradient);
 color2.addEventListener("input", setGradient);
 
 function setGradient() {
-  console.log(iconDirection);
   body.style.background =
-    "linear-gradient(, " +
-    iconDirection +
-    color1.value +
-    ", " +
-    color2.value +
-    ")";
+    "linear-gradient(to right, " + color1.value + ", " + color2.value + ")";
   newCssBg.textContent = body.style.background + ";";
 }
 
@@ -71,12 +59,7 @@ function generateRandomcolors() {
   let randomColor1 = "#" + Math.floor(Math.random() * 16777215).toString(16);
   let randomColor2 = "#" + Math.floor(Math.random() * 16777215).toString(16);
   body.style.background =
-    "linear-gradient(, " +
-    iconDirection +
-    randomColor1 +
-    ", " +
-    randomColor2 +
-    ")";
+    "linear-gradient(to right, " + randomColor1 + ", " + randomColor2 + ")";
   newCssBg.textContent = body.style.background + ";";
   color1.value = randomColor1;
   color2.value = randomColor2;
