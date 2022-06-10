@@ -4,8 +4,8 @@ let color2 = document.querySelector(".color2");
 let body = document.getElementById("gradient");
 let rand = document.getElementById("random");
 let iconButtons = document.getElementsByClassName("btn-icons");
-let iconDirection;
 let rainbowBtn = document.getElementById("rainbow");
+let iconDirection;
 
 for (let iconButton of iconButtons) {
   iconButton.addEventListener("click", changeGradientDirection);
@@ -38,7 +38,7 @@ function changeGradientDirection(event) {
   }
 
   body.style.background =
-    "linear-gradient(to right, " +
+    "linear-gradient(" +
     iconDirection +
     ", " +
     color1.value +
