@@ -43,7 +43,8 @@ h3 {
   letter-spacing: 0.01em;
 }
 
-#random {
+#random,
+#rainbow {
   background-color: white;
   color: rgba(0, 0, 0, 0.5);
   padding: 0.5rem 0.5rem;
@@ -52,6 +53,7 @@ h3 {
   font-weight: 700;
 }
 
-#random:hover {
+#random:hover,
+#rainbow:hover {
   background-color: #b7b7b7;
 }

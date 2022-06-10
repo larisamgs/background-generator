@@ -5,6 +5,7 @@ let body = document.getElementById("gradient");
 let rand = document.getElementById("random");
 let iconButtons = document.getElementsByClassName("btn-icons");
 let iconDirection;
+let rainbowBtn = document.getElementById("rainbow");
 
 for (let iconButton of iconButtons) {
   iconButton.addEventListener("click", changeGradientDirection);
@@ -54,7 +55,6 @@ color1.addEventListener("input", setGradient);
 color2.addEventListener("input", setGradient);
 
 function setGradient() {
-  console.log(iconDirection);
   body.style.background =
     "linear-gradient(to right, " + color1.value + ", " + color2.value + ")";
   newCssBg.textContent = body.style.background + ";";
@@ -70,4 +70,12 @@ function generateRandomcolors() {
   newCssBg.textContent = body.style.background + ";";
   color1.value = randomColor1;
   color2.value = randomColor2;
+}
+
+rainbowBtn.addEventListener("click", makeRainbow);
+
+function makeRainbow() {
+  body.style.background =
+    "linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet)";
+  newCssBg.textContent = body.style.background + ";";
 }
