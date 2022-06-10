@@ -8,74 +8,74 @@ let rainbowBtn = document.getElementById("rainbow");
 let iconDirection;
 
 for (let iconButton of iconButtons) {
-  iconButton.addEventListener("click", changeGradientDirection);
+    iconButton.addEventListener("click", changeGradientDirection);
 }
 
 function changeGradientDirection(event) {
-  let buttonOrIconElement = event.target;
-  if (buttonOrIconElement.tagName === "BUTTON") {
-    buttonOrIconElement = buttonOrIconElement.children[0];
-  }
-  const iconClassThatContainsDirectionInformation =
-    buttonOrIconElement.classList[1];
+    let buttonOrIconElement = event.target;
+    if (buttonOrIconElement.tagName === "BUTTON") {
+        buttonOrIconElement = buttonOrIconElement.children[0];
+    }
+    const iconClassThatContainsDirectionInformation =
+        buttonOrIconElement.classList[1];
 
-  if (iconClassThatContainsDirectionInformation === "fa-square-caret-down") {
-    iconDirection = "to bottom";
-  } else if (
-    iconClassThatContainsDirectionInformation === "fa-square-caret-up"
-  ) {
-    iconDirection = "to top";
-  } else if (
-    iconClassThatContainsDirectionInformation === "fa-square-caret-left"
-  ) {
-    iconDirection = "to left";
-  } else if (
-    iconClassThatContainsDirectionInformation === "fa-square-caret-right"
-  ) {
-    iconDirection = "to right";
-  } else {
-    console.log("default");
-  }
+    if (iconClassThatContainsDirectionInformation === "fa-square-caret-down") {
+        iconDirection = "to bottom";
+    } else if (
+        iconClassThatContainsDirectionInformation === "fa-square-caret-up"
+    ) {
+        iconDirection = "to top";
+    } else if (
+        iconClassThatContainsDirectionInformation === "fa-square-caret-left"
+    ) {
+        iconDirection = "to left";
+    } else if (
+        iconClassThatContainsDirectionInformation === "fa-square-caret-right"
+    ) {
+        iconDirection = "to right";
+    }
 
-  body.style.background =
-    "linear-gradient(" +
-    iconDirection +
-    ", " +
-    color1.value +
-    ", " +
-    color2.value +
-    ")";
+    body.style.background =
+        "linear-gradient(" +
+        iconDirection +
+        ", " +
+        color1.value +
+        ", " +
+        color2.value +
+        ")";
+
+    newCssBg.textContent = body.style.background + ";";
 }
 
 body.style.background =
-  "linear-gradient(to right, " + color1.value + ", " + color2.value + ")";
+    "linear-gradient(to right, " + color1.value + ", " + color2.value + ")";
 newCssBg.textContent = body.style.background + ";";
 
 color1.addEventListener("input", setGradient);
 color2.addEventListener("input", setGradient);
 
 function setGradient() {
-  body.style.background =
-    "linear-gradient(to right, " + color1.value + ", " + color2.value + ")";
-  newCssBg.textContent = body.style.background + ";";
+    body.style.background =
+        "linear-gradient(to right, " + color1.value + ", " + color2.value + ")";
+    newCssBg.textContent = body.style.background + ";";
 }
 
 rand.addEventListener("click", generateRandomcolors);
 
 function generateRandomcolors() {
-  let randomColor1 = "#" + Math.floor(Math.random() * 16777215).toString(16);
-  let randomColor2 = "#" + Math.floor(Math.random() * 16777215).toString(16);
-  body.style.background =
-    "linear-gradient(to right, " + randomColor1 + ", " + randomColor2 + ")";
-  newCssBg.textContent = body.style.background + ";";
-  color1.value = randomColor1;
-  color2.value = randomColor2;
+    let randomColor1 = "#" + Math.floor(Math.random() * 16777215).toString(16);
+    let randomColor2 = "#" + Math.floor(Math.random() * 16777215).toString(16);
+    body.style.background =
+        "linear-gradient(to right, " + randomColor1 + ", " + randomColor2 + ")";
+    newCssBg.textContent = body.style.background + ";";
+    color1.value = randomColor1;
+    color2.value = randomColor2;
 }
 
 rainbowBtn.addEventListener("click", makeRainbow);
 
 function makeRainbow() {
-  body.style.background =
-    "linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet)";
-  newCssBg.textContent = body.style.background + ";";
+    body.style.background =
+        "linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet)";
+    newCssBg.textContent = body.style.background + ";";
 }
