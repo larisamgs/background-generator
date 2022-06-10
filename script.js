@@ -37,7 +37,13 @@ function changeGradientDirection(event) {
   }
 
   body.style.background =
-    "linear-gradient(to right, " + color1.value + ", " + color2.value + ")";
+    "linear-gradient(to right, " +
+    iconDirection +
+    ", " +
+    color1.value +
+    ", " +
+    color2.value +
+    ")";
 }
 
 body.style.background =
@@ -48,6 +54,7 @@ color1.addEventListener("input", setGradient);
 color2.addEventListener("input", setGradient);
 
 function setGradient() {
+  console.log(iconDirection);
   body.style.background =
     "linear-gradient(to right, " + color1.value + ", " + color2.value + ")";
   newCssBg.textContent = body.style.background + ";";
